@@ -1,0 +1,40 @@
+/* Main */
+/* Main - music options */
+.options{
+  text-align: center;
+  padding: 50px 0;
+  select{
+    margin-left: 15px;
+  }
+}
+
+/* Main - album section */
+.list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  .list-album{
+    flex-basis: 155px;
+    background: $back-album-com;
+    margin: 10px 11px;
+    padding: 10px;
+    text-align: center;
+    img{
+      height: 120px;
+    }
+    .title{
+      text-transform: uppercase;
+      margin: 20px 0;
+      font-size: 20px;
+    }
+    &.author,
+    &.year{
+      color: $primary-col;
+      margin-bottom: 15px;
+    }
+    &.author{
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+/* Common */
+/* Header */
+/* Main */
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+body {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  background: #192d3c;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Utilities */
+.container {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: #132431;
+}
+header .header-app img {
+  max-width: 70px;
+  padding: 10px 10px 4px;
+}
+
+/* Main */
+/* Main - music options */
+.options {
+  text-align: center;
+  padding: 50px 0;
+}
+.options select {
+  margin-left: 15px;
+}
+
+/* Main - album section */
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.list .list-album {
+  flex-basis: 155px;
+  background: #000000;
+  margin: 10px 11px;
+  padding: 10px;
+  text-align: center;
+}
+.list .list-album img {
+  height: 120px;
+}
+.list .list-album .title {
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-size: 20px;
+}
+.list .list-album.author, .list .list-album.year {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.list .list-album.author {
+  font-size: 18px;
+}

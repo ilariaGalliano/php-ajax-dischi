@@ -1,0 +1,16 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+body {
+  font-family: $font;
+  color: $primary-col;
+  background: $background-col;
+}
+img{
+  max-width: 100%;
+}
