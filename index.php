@@ -38,25 +38,24 @@
 
         <!-- Album section -->
         <section class="album-section">
+         <div class="container">
 
           <ul class="list">
           <!-- Php -->
           <?php  foreach ($database as $data) { ?>
-              <li class="list-album">
-                <img src="<?php echo $data['poster']; ?>">
-                <h3 class="title"> <?php echo $data['title']; ?> </h3>
-                <small class="author"> <?php echo $data['author']; ?> </small>
-                <h3 class="year"> <?php echo $data['year']; ?> </h3>
-                <small class="genre"> <?php echo $data['genre']; ?> </small>
+                   <li class="list-album">
+                    <img src="<?php echo $data['poster']; ?>">
+                    <h3 class="title"> <?php echo $data['title']; ?> </h3>
+                    <small class="author"> <?php echo $data['author']; ?> </small>
+                    <h3 class="year"> <?php echo $data['year']; ?> </h3>
+                    <small class="genre"> <?php echo $data['genre']; ?> </small>
+    <?php        }?>
+                   </li>
+          </ul>
+         </div>
 
-   <?php        }?>
-              </li>
-         </ul>
-         
         </section>
-
       </main>
-
 
   </body>
 </html>

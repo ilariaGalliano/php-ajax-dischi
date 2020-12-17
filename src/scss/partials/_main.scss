@@ -3,8 +3,13 @@
 .options{
   text-align: center;
   padding: 50px 0;
+  font-size: 18px;
   select{
     margin-left: 15px;
+    padding: 10px;
+      option{
+        font-size: 14px;
+      }
   }
 }
 
@@ -15,18 +20,17 @@
   flex-wrap: wrap;
   list-style: none;
   .list-album{
-    flex-basis: 206px;
-    height: 315px;
-    background: $back-album-com;
-    margin: 10px 11px;
-    padding: 10px;
+    width: calc((100% / 3) - 90px);
+    margin: 10px;
     text-align: center;
+    padding: 20px 40px;
+    background: $back-album-com;
     img{
-      height: 120px;
+      height: 150px;
     }
     .title{
       margin: 20px 0;
-      font-size: 16px;
+      font-size: 18px;
     }
     .author,
     .year{

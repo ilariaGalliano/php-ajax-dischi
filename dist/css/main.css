@@ -39,9 +39,14 @@ header .header-app img {
 .options {
   text-align: center;
   padding: 50px 0;
+  font-size: 18px;
 }
 .options select {
   margin-left: 15px;
+  padding: 10px;
+}
+.options select option {
+  font-size: 14px;
 }
 
 /* Main - album section */
@@ -52,19 +57,18 @@ header .header-app img {
   list-style: none;
 }
 .list .list-album {
-  flex-basis: 206px;
-  height: 315px;
-  background: #000000;
-  margin: 10px 11px;
-  padding: 10px;
+  width: calc((100% / 3) - 90px);
+  margin: 10px;
   text-align: center;
+  padding: 20px 40px;
+  background: #000000;
 }
 .list .list-album img {
-  height: 120px;
+  height: 150px;
 }
 .list .list-album .title {
   margin: 20px 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 .list .list-album .author,
 .list .list-album .year {
