@@ -52,7 +52,8 @@ header .header-app img {
   list-style: none;
 }
 .list .list-album {
-  flex-basis: 155px;
+  flex-basis: 206px;
+  height: 315px;
   background: #000000;
   margin: 10px 11px;
   padding: 10px;
@@ -62,14 +63,14 @@ header .header-app img {
   height: 120px;
 }
 .list .list-album .title {
-  text-transform: uppercase;
   margin: 20px 0;
-  font-size: 20px;
+  font-size: 16px;
 }
-.list .list-album.author, .list .list-album.year {
+.list .list-album .author,
+.list .list-album .year {
   color: #fff;
-  margin-bottom: 15px;
+  margin: 25px 0;
 }
-.list .list-album.author {
-  font-size: 18px;
+.list .list-album .author {
+  font-size: 14px;
 }

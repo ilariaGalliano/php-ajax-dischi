@@ -15,7 +15,8 @@
   flex-wrap: wrap;
   list-style: none;
   .list-album{
-    flex-basis: 155px;
+    flex-basis: 206px;
+    height: 315px;
     background: $back-album-com;
     margin: 10px 11px;
     padding: 10px;
@@ -24,17 +25,16 @@
       height: 120px;
     }
     .title{
-      text-transform: uppercase;
       margin: 20px 0;
-      font-size: 20px;
+      font-size: 16px;
     }
-    &.author,
-    &.year{
+    .author,
+    .year{
       color: $primary-col;
-      margin-bottom: 15px;
+      margin: 25px 0;
     }
-    &.author{
-      font-size: 18px;
+    .author{
+      font-size: 14px;
     }
   }
 }
