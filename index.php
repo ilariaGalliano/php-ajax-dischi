@@ -23,13 +23,14 @@
 
         <!-- Music options -->
         <div class="options"> Filter by artist:
-          <select value="">
-            <option value="all">Bon Jovi</option>
-            <option value="pop">Queen</option>
-            <option value="rock">Sting</option>
-            <option value="jazz">Steve Gadd Band</option>
-            <option value="metal">Metallica</option>
-            <option value="metal">Eric Clapton</option>
+          <select v-model="filterArtist" @change="chooseArtist" value="">
+            <option value="all">All</option>
+            <option value="bon jovi">Bon Jovi</option>
+            <option value="queen">Queen</option>
+            <option value="sting">Sting</option>
+            <option value="steve gadd band">Steve Gadd Band</option>
+            <option value="metallica">Metallica</option>
+            <option value="eric clapton">Eric Clapton</option>
           </select>
         </div>
 
@@ -52,6 +53,7 @@
 
         </section>
       </main>
+
    </div>
 
     <!-- Js -->
