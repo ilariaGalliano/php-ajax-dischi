@@ -8,11 +8,7 @@
    <link rel="stylesheet" href="./dist/css/main.css">
   </head>
   <body>
-
-    <?php // include file database php
-      include __DIR__ . '/partials/database.php'
-    ?>
-
+   <div id="app">
       <!-- Header -->
       <header>
         <div class="container">
@@ -26,13 +22,14 @@
       <main class="main-app">
 
         <!-- Music options -->
-        <div class="options"> Filter by gendre:
-          <select v-model="actualMusic" @change="chooseTypeMusic">
-            <option value="all">All</option>
-            <option value="pop">Pop</option>
-            <option value="rock">Rock</option>
-            <option value="jazz">Jazz</option>
-            <option value="metal">Metal</option>
+        <div class="options"> Filter by artist:
+          <select value="">
+            <option value="all">Bon Jovi</option>
+            <option value="pop">Queen</option>
+            <option value="rock">Sting</option>
+            <option value="jazz">Steve Gadd Band</option>
+            <option value="metal">Metallica</option>
+            <option value="metal">Eric Clapton</option>
           </select>
         </div>
 
@@ -41,21 +38,24 @@
          <div class="container">
 
           <ul class="list">
-          <!-- Php -->
-          <?php  foreach ($database as $data) { ?>
-                   <li class="list-album">
-                    <img src="<?php echo $data['poster']; ?>">
-                    <h3 class="title"> <?php echo $data['title']; ?> </h3>
-                    <small class="author"> <?php echo $data['author']; ?> </small>
-                    <h3 class="year"> <?php echo $data['year']; ?> </h3>
-                    <small class="genre"> <?php echo $data['genre']; ?> </small>
-    <?php        }?>
-                   </li>
+            <!-- Vue -->
+            <li v-for="artist in artists" class="list-album">
+              <img :src="artist.poster" :alt="artist.title">
+                <h3 class="title"> {{artist.title}} </h3>
+                <small class="author"> {{artist.author}} </small>
+                <h3 class="year"> {{artist.year}} </h3>
+                <small class="genre"> {{artist.genre}} </small>
+            </li>
+
           </ul>
          </div>
 
         </section>
       </main>
+   </div>
+
+    <!-- Js -->
+    <script src="./dist/js/main.js"></script>
 
   </body>
 </html>

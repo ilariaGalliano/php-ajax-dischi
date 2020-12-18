@@ -11,10 +11,10 @@ let mix = require('laravel-mix');
  |
  */
 
- mix.js('src/js/main.js', 'dist/js')
+mix.js('src/js/main.js', 'dist/js')
     .sass('src/scss/main.scss', 'dist/css')
     .browserSync({
-         proxy: 'http://localhost:8888/php-google/',
+         proxy: 'http://localhost:8888/php-ajax-dischi/',
          watch: true,
          files: ['./**/*.css', './**/*.js', './**/*.+(html|php)'],
      })
