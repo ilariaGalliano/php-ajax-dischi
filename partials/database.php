@@ -1,5 +1,5 @@
 <?php
-
+    $filtered= [];
     $database = [
         [
             'title' => 'New Jersey',
@@ -45,9 +45,26 @@
         ]
     ];
 
+
+    if (! empty($_GET['author'] )){
+
+            foreach ($database as $data){
+
+                if ($data['author'] == $_GET['author']){
+
+                    $filtered[] = $data;
+
+                }
+                else if ( 'all' == $_GET['author'] ) {
+                    $filtered = $database;
+                }
+            };
+        } else {
+            $filtered = $database;
+        };
     // Get data
     header('Content-Type: application/json');
-    
-    echo json_encode($database);
+
+    echo json_encode($filtered);
 
   ?>

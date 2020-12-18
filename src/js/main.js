@@ -5,6 +5,7 @@ const app = new Vue({
   el: '#app',
   data: {
     artists: [],
+    authors: [],
     filterArtist: 'all',
   },
   created(){
@@ -15,6 +16,7 @@ const app = new Vue({
       // handle success
       console.log(response.data);
       this.artists = response.data;
+      this.authors = response.data;
     })
     .catch(error => {
       // handle error
@@ -24,21 +26,19 @@ const app = new Vue({
   methods: {
 
     chooseArtist(){
+
       const dataUlr = window.location.href + 'partials/database.php';
 
-      axios.get(dataUlr)
-        .then(response => {
-          let artistList = response.data;
-          console.log(response.data);
+      axios.get(dataUlr, {
+            params: {
+              author: this.filterArtist,
+            }
+      })
+          .then(response => {
+            this.artists = response.data;
+          })
 
-          if (this.filterArtist !== 'all') {
-            artistList = artistList.filter( el => el.author.toLowerCase() === this.filterArtist );
-          }
-
-          this.artists = artistList;
-        })
-
-        .catch(error => { console.log('errore:', error); })
+          .catch(error => { console.log('errore:', error); })
 
     }
   }

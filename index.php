@@ -9,6 +9,7 @@
   </head>
   <body>
    <div id="app">
+
       <!-- Header -->
       <header>
         <div class="container">
@@ -22,16 +23,12 @@
       <main class="main-app">
 
         <!-- Music options -->
+
         <div class="options"> Filter by artist:
           <select v-model="filterArtist" @change="chooseArtist" value="">
-            <option value="all">All</option>
-            <option value="bon jovi">Bon Jovi</option>
-            <option value="queen">Queen</option>
-            <option value="sting">Sting</option>
-            <option value="steve gadd band">Steve Gadd Band</option>
-            <option value="metallica">Metallica</option>
-            <option value="eric clapton">Eric Clapton</option>
-          </select>
+            <option value="all" selected>All</option>
+            <option v-for="author in authors" :value="author.author">{{author.author}}</option>
+        </select>
         </div>
 
         <!-- Album section -->
@@ -39,6 +36,7 @@
          <div class="container">
 
           <ul class="list">
+
             <!-- Vue -->
             <li v-for="artist in artists" class="list-album">
               <img :src="artist.poster" :alt="artist.title">
@@ -54,7 +52,7 @@
         </section>
       </main>
 
-   </div>
+    </div>
 
     <!-- Js -->
     <script src="./dist/js/main.js"></script>

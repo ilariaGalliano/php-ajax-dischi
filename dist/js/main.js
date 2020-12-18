@@ -14424,6 +14424,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
   data: {
     artists: [],
+    authors: [],
     filterArtist: 'all'
   },
   created: function created() {
@@ -14434,6 +14435,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       // handle success
       console.log(response.data);
       _this.artists = response.data;
+      _this.authors = response.data;
     })["catch"](function (error) {
       // handle error
       console.log(error);
@@ -14444,17 +14446,12 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       var _this2 = this;
 
       var dataUlr = window.location.href + 'partials/database.php';
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(dataUlr).then(function (response) {
-        var artistList = response.data;
-        console.log(response.data);
-
-        if (_this2.filterArtist !== 'all') {
-          artistList = artistList.filter(function (el) {
-            return el.author.toLowerCase() === _this2.filterArtist;
-          });
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(dataUlr, {
+        params: {
+          author: this.filterArtist
         }
-
-        _this2.artists = artistList;
+      }).then(function (response) {
+        _this2.artists = response.data;
       })["catch"](function (error) {
         console.log('errore:', error);
       });
